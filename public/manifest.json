@@ -14,18 +14,23 @@
     "prefer_related_applications": false,
     "icons": [
       {
+        "src": "/Icons/manifest_icons/Logo512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },      
+      {
         "src": "/Icons/manifest_icons/Logo192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo180.png",
-        "sizes": "192x192",
+        "sizes": "180x180",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo152.png",
-        "sizes": "192x192",
+        "sizes": "152x152",
         "type": "image/png"
       },
       {
@@ -35,12 +40,12 @@
       },
       {
         "src": "/Icons/manifest_icons/Logo120.png",
-        "sizes": "144x144",
+        "sizes": "120x120",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo114.png",
-        "sizes": "144x144",
+        "sizes": "114x114",
         "type": "image/png"
       },
       {
@@ -50,22 +55,22 @@
       },
       {
         "src": "/Icons/manifest_icons/Logo76.png",
-        "sizes": "72x72",
+        "sizes": "76x76",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo72.png",
-        "sizes": "48x48",
+        "sizes": "72x72",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo60.png",
-        "sizes": "48x48",
+        "sizes": "60x60",
         "type": "image/png"
       },
       {
         "src": "/Icons/manifest_icons/Logo57.png",
-        "sizes": "48x48",
+        "sizes": "57x57",
         "type": "image/png"
       },
       {
@@ -75,7 +80,7 @@
       },
       {
         "src": "/Icons/manifest_icons/Logo36.png",
-        "sizes": "48x48",
+        "sizes": "36x36",
         "type": "image/png"
       },
       {

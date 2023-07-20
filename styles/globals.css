@@ -16,7 +16,7 @@ html, main, body{
   color: rgb(var(--fontcolor));
 	margin: 0px auto;
   width: clamp(320px, 100vw, 100vw);
-  font-size: clamp(9px, 1.4vw, 21px);
+  font-size: clamp(12px, 1.4vw, 21px);
 }
 * {
   box-sizing: border-box;

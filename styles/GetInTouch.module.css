@@ -33,7 +33,7 @@
     transition: 300ms;
     grid-area: articleHead;
 }
-.articleHead > h1:hover{
+.articleHead > h1:hover{	
 	text-shadow: 1px 1px 14px white;
 }
 .container {

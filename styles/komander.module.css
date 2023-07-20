@@ -1,14 +1,15 @@
 .main{
-    display: grid;
     padding: 1rem;
-    grid-template-columns: clamp(calc(100vh - 140px - 70px - 5rem),30%,30%) calc(70% - 3rem);
-    grid-template-rows: calc(100vh - 140px - 70px - 5rem) max-content;
-    height: auto;
-    grid-template-areas: 
-        'Image   Description'
-        'Image   IconsServOffer'
-    ;
     width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: clamp(calc(100vh - 140px - 70px - 5rem),30%,30%) calc(70% - 4rem);
+    grid-template-rows: minmax(350px,max-content) max-content;
+    grid-template-areas: 
+        'Image      Description'
+        'Tickets    Tickets'
+        'FAQS       FAQS'
+    ;
     margin: 0rem auto;
 }
 .Image {
@@ -16,21 +17,15 @@
     position: relative;
     width: 90%;
     vertical-align: top;
-    height: 40%;
+    height: 100%;
     margin: auto;
-    border: 1px solid gray;
-    box-shadow: 1px 1px 10px white;
     border-radius: 50%;
     overflow: hidden;
-}
-.article li{
-    margin-bottom: 0.8rem;
 }
 .article{
     grid-area: Description;
     text-align: left;
     padding: 0 1rem;
-    overflow: auto;
 }
 .article > h1{
     text-align: center;
@@ -42,22 +37,15 @@
 .article > h1:hover{
     text-shadow: 1px 1px 14px white;
 }
-#IconsServOffer{
-    grid-area: IconsServOffer;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    vertical-align: middle;
-}
-.IconSO{
-    position: relative;
-    width:70px;
+.container {
+    grid-area: Tickets;
 }
 
 .container form {
-	display: grid;
+    display: grid;
     flex-flow: row wrap;
 	gap: 5px;
+    padding: 1rem;
 }
 .container label {
 	font-weight: bold;
@@ -66,24 +54,8 @@
 	font-size: 1rem;
 	color: whitesmoke;
 }
-.container input, .container textarea {
-	width: 100%;
-	padding: 10px;
-	border: none;
-    border-radius: 7px;
-    border-bottom: 1px solid #ccc;
-}  
-.container input:focus,
-.container textarea:focus {
-	box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.1);
-}  
-.contact-info {
-	/* float: left; */
-	width: 50%;
-	margin-top: 20px;
-}
 .articleHead > h1{
-	text-align: left;
+	text-align: center;
     padding: 1rem;
     font-size: 3rem;
     text-shadow: 1px 1px 7px white;
@@ -94,24 +66,65 @@
 	text-shadow: 1px 1px 14px white;
 }
 .container {
-	max-width: 600px;
-	padding: 20px;
-	background-color: rgb(var(--basecolor));
-	border-radius: 5px;
-	width: 50%;
+	width: 70%;
 	margin: auto;
 }
+.ticketsContainer{
+    width: clamp(200px, 400px, 600px);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.ticketsContainer div{
+    width: 140px;
+    height: 100%;
+    display: flex;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    border-radius: 14px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+.ticketsContainer p{
+    width: 140px;
+    height: 100%;
+    margin: auto;
+    background-color: black;
+    border-radius: 14px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    transition: 300ms;
+}
+.ticketsContainer p:nth-child(2){
+    background-color: transparent;
+    color: white;
+}
+.ticketsContainer :not(:nth-child(2)):hover{
+    background-color: white;
+    color: black;
+    font-weight: 900;
+}
+
 .container button{
-    width: 100%;
-	padding: 10px;
+    width: max-content;
     align-self: center;
     border: 1px solid rgb(var(--fontcolor));
     color: rgb(var(--fontcolor));
     background-color: rgb(var(--basecolor));
-    padding: 7px;
+	padding: 10px 70px;
     border-radius: 14px;
     font-weight: 700;
     transition: var(--fastrans);
+    margin: 1rem auto;
 }
 .container button:hover{
     border: 1px solid rgb(var(--basecolor));
@@ -137,7 +150,7 @@
 
 @media screen and (max-width:750px) and (orientation:portrait){
     .main{
-        height: calc(100vh - 100px);
+        height: calc(100vh - 50px);
         grid-template-columns: 1fr;
         grid-template-rows:  170px auto 50px;
         grid-template-areas: 
@@ -152,10 +165,10 @@
         margin: 1rem;
         margin: auto;
     }
-    .IconSO{
+    /* .IconSO{
         width:40px;
         height: 40px;
-    }
+    } */
 }
 @media screen and (max-width: 700px) and (orientation:landscape) {
     .main{

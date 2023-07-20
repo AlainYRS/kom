@@ -3,7 +3,6 @@ import Image from "next/image";
 import Head from "next/head";
 import PagesHeadComp from "@/complements/components/PagesHeadComp/PagesHeadComp";
 import FooterComp from "@/complements/components/FooterComp/FooterComp";
-// import styles from '@/styles/aboutUs.module.css'
 import styles from '@/styles/komander.module.css'
 import {HeaderCompBoots} from '@/complements/components/HeaderComp/HeaderCompBoots';
 import ShowTitle from "@/complements/components/ShowTitle/ShowTitle";
@@ -16,6 +15,13 @@ interface IClicked{
 
 export default function Komander(){
     const [TitleVisible, setTitleVisible] = useState<any>(null)
+    const [CarTickets, setCarTickets] = useState<any>(
+        {
+            VIPGold: 0,
+            VIP: 0,
+            General: 0,
+        }
+    )
 
     const form = useRef<any>();
 
@@ -66,25 +72,34 @@ export default function Komander(){
                         <h1>Adquiere aqui tus boletos</h1>
                     </article>
                     <form method="post" ref={form} className={styles.form}>
-                        <label htmlFor="VIP">VIP Gold: $300 
-                            <Image src="/Icons/AddIcon.png" width={35} height={35} alt="Agregar" />
-                        </label>
-                        <br/>
-                            {/* <input name="VIP" type="text" id="vip"/> */}
-                        <label htmlFor="Golden">VIP: $250 
-                            <Image src="/Icons/AddIcon.png" width={35} height={35} alt="Agregar" />
-                        </label>
-                        <br/>
-                            {/* <input name="Golden" type="email" placeholder="Enter your Email " id="golden"/> */}
-                        <label htmlFor="Admision_General">General: $150 
-                            <Image src="/Icons/AddIcon.png" width={35} height={35} alt="Agregar" />
-                        </label>
-                        <br/>
-                            {/* <input name="Admision_General" type="text" placeholder="Boletos de seccion general" id="general"/> */}
+                        <div className={styles.ticketsContainer}>
+                            <label htmlFor="VIPGold">VIP Gold: $300 </label>
+                            <div>
+                                <p onClick={()=>setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold - 1})}> - </p>
+                                <p>{CarTickets.VIPGold}</p>
+                                <p onClick={()=>setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold + 1})}> + </p>
+                            </div>
+                        </div>
+                        <div className={styles.ticketsContainer}>
+                            <label htmlFor="VIP">VIP: $250 </label>
+                            <div>
+                                <p onClick={()=>setCarTickets({...CarTickets, VIP: CarTickets.VIP - 1})}> - </p>
+                                <p>{CarTickets.VIP}</p>
+                                <p onClick={()=>setCarTickets({...CarTickets, VIP: CarTickets.VIP + 1})}> + </p>
+                            </div>
+                        </div>
+                        <div className={styles.ticketsContainer}>
+                            <label htmlFor="General">General: $300 </label>
+                            <div>
+                                <p onClick={()=>setCarTickets({...CarTickets, General: CarTickets.General - 1})}> - </p>
+                                <p>{CarTickets.General}</p>
+                                <p onClick={()=>setCarTickets({...CarTickets, General: CarTickets.General + 1})}> + </p>
+                            </div>
+                        </div>
                         <button type="submit" value="Send">Comprar</button>
                     </form>
                 </div>
-                <div>
+                <div className={styles.faqs}>
                     Preguntas Frecuentes:
                     <br/>
                     <br/>

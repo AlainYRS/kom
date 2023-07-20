@@ -64,6 +64,9 @@ function Footer(props:IFooter){
                             url:'https://www.facebook.com/elpatronbarandgrill?mibextid=LQQJ4d'
                         }}
                     />
+                    <a href="https://www.instagram.com/elpatron_leamington/?igshid=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener noreferrer">
+                        <Image src={'/Icons/InstaIcon.png'} style={{borderRadius:'50px'}} width={30} height={30} alt={'Instagram'}/>
+                    </a>
                 </div>
             </div>
         </>

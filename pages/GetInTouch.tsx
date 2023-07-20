@@ -1,5 +1,7 @@
 import React, { useRef , useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image"
 import PagesHeadComp from "@/complements/components/PagesHeadComp/PagesHeadComp";
 import FooterComp from "@/complements/components/FooterComp/FooterComp";
 import styles from '@/styles/GetInTouch.module.css'
@@ -58,9 +60,9 @@ export default function GetinTouch(){
                 <div className={styles.container}>
                     <article className={styles.articleHead}>
                         <h1>Contact</h1>
-                        <a className="navbar-brand" href="/">                
-                            <img className="MenuLogo" src={'./Images/logo.png'} alt="El Patron Logo"/>
-                        </a>
+                        <Link href={"/"} className="navbar-brand">                
+                            <Image className="MenuLogo" src={'./Images/logo.png'} fill alt="El Patron Logo"/>
+                        </Link>
                     </article>
                     <form method="post" ref={form} onSubmit={sendEmail} className={styles.form}>
                         <label htmlFor="user_name">Name / Name:*</label>

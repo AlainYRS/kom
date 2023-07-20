@@ -1,0 +1,166 @@
+.main{
+    height: calc(100vh - 3rem);
+    background-color: rgb(0,0,0);
+}
+.GetTouchCont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.MenuButton{
+    right: 0px;
+    width: max-content;
+    align-self: center;
+    color: rgb(var(--basecolor));
+    background-color: rgb(var(--fontcolor));
+    padding: 9px 5px;
+    margin: 0.7rem;
+    border-radius: 7px;
+    right: 0px;
+    transition: var(--fastrans);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+#MainLinksMenu{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+    display: grid;
+    background-image: url('../public/Images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position-y: 0rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: max-content repeat(2,calc(50vh - 92px)) 1fr;
+    grid-template-areas: 
+        "DigTrans DigTrans DigTrans"
+        "InnovLab Logo ProfServ"
+        "AboutUs Logo NewProj"
+        "LeftB Logo RightB"
+    ;
+}
+#DigitalTransformation{grid-area: DigTrans}
+#NewestProject{grid-area: NewProj}
+#AboutUs{grid-area: AboutUs}
+#ProfessionalServices{grid-area: ProfServ}
+#DigitalTransformation{grid-area: DigTrans}
+#DigitalTransformation{
+    height: 100%;
+    text-align: center;
+    align-self: baseline;
+    z-index: 1;
+}
+#Logo{
+    display: none;
+}
+#AboutUs,
+#InnovationLab,
+#NewestProject,
+#ProfessionalServices{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#NewestProject,
+#ProfessionalServices{
+    text-align: left;
+}
+#AboutUs,
+#InnovationLab{
+    text-align: right;
+}
+#InnovationLab > span,
+#ProfessionalServices > span,
+#AboutUs > span,
+#NewestProject > span{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#InnovationLab > span,
+#ProfessionalServices > span{
+    align-items: center;
+}
+#AboutUs > span,
+#NewestProject > span{
+    align-items: top;
+}
+#AboutUs > span,
+#InnovationLab > span,
+#ProfessionalServices > span,
+#NewestProject > span
+{
+    justify-content: center;
+}
+.MainLink{
+    line-height: 3rem;
+}
+.MainLink > span{
+    color: rgb(var(--fontcolor));
+    transition: var(--fastrans);
+    font-size: 2rem;
+    text-decoration: none;
+}
+.MainLink > span:hover{
+    text-shadow: 0px 0px 35px white;
+}
+#AbUsMainLink{
+    display: none;
+    position: relative;
+    width: 100vw;
+    height: 50vh;
+}
+
+@media screen and (max-width:770px) and (orientation: portrait) {
+    .MenuButton{
+        margin: 7px;
+        border-radius: 35px;
+        font-weight: 700;
+    }
+    #Logo{
+        display: block;
+        position: relative;
+        width: calc(100vw - 7rem);
+        height: calc(100vw - 7rem);
+        margin: 3.5rem;
+    }
+    #MainLinksMenu{
+        display: flex;
+        height: calc(100vh - 100vw - 10rem);
+        flex-flow: column nowrap;
+        background-image: none;
+    }
+    .MainLink{
+        width: 100%;
+        text-align: center;
+        line-height: 10vw;
+    }
+    .MainLink > span{
+        display: block;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 850px) and (orientation:landscape) {
+    #MainLinksMenu{
+        background-position-y: calc((20vh - 100px)/2);
+        height: 90vh;
+        grid-template-rows: max-content repeat(1,calc(65vh - 100px)) 1fr 1fr;
+        grid-template-areas: 
+            "DigTrans DigTrans DigTrans"
+            "InnovLab Logo ProfServ"
+            "AboutUs Logo NewProj"
+            "LeftB Logo RightB"
+        ;
+    }
+
+    #InnovationLab > span,
+    #ProfessionalServices > span,
+    #AboutUs > span,
+    #NewestProject > span{
+        height: 70%;
+    }
+}

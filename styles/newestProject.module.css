@@ -1,0 +1,106 @@
+.NewProj{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.imagecontainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.Proj{
+    width: 50%;
+    height: max-content;
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    padding: 1rem;
+    text-align: center;
+    display: block;
+}
+.Proj figcaption{
+    width: 100%;
+    text-align: center;
+}
+.Image {
+    position: relative;
+    display: block;
+    width: 14vw;
+    height: 14vw;
+    margin: 1rem auto;
+	border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 1px 1px 14px white;
+    transition: var(--fastrans);
+    border-width: 10px;
+    border-style: solid;
+}
+.Image:hover {
+    border-color: rgba(245,245,245,0.3);
+    transition: 300ms;
+}
+.Img{
+	filter: drop-shadow(1px 1px 3px gray);
+    width: 100%;
+}
+.article{
+    text-align: center;
+    padding: 0 2rem;
+}
+.article > h1{
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    text-shadow: 1px 1px 7px white;
+    transition: 300ms;
+}
+.article > h1:hover{
+    text-shadow: 1px 1px 14px white;
+}
+.article p {
+    margin-bottom: 1rem;
+	font-style: monospace;
+	line-height: 1em;
+}
+@media screen and (max-width: 490px) and (orientation: portrait) {
+    .imagecontainer{
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .Proj{
+        width: 100%;
+        padding: 2rem;
+    }
+    .Proj figcaption{
+        padding: 2rem;
+    }
+    .Image {
+        width: 35vw;
+        height: 35vw;
+        border-radius: 21px;
+    }
+    .article{
+        padding: 2rem 1rem;
+    }
+    .article > h1{
+        font-size: 5rem;
+    }
+    .article p {
+        font-style: monospace;
+    }
+}
+@media screen and (max-width: 700px) and (orientation:landscape) {
+    .Image {
+        border-radius: 14px;
+    }
+    .article > h1{
+        font-size: 2rem;
+    }
+    .article p {
+        margin-bottom: 1rem;
+        font-style: monospace;
+        line-height: 1em;
+    }
+}

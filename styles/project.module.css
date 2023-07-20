@@ -1,0 +1,95 @@
+.main{
+    width: 100%;
+    height: max-content;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(var(--basecolor));
+    padding: 0 2rem;
+}
+.ServicesButton{
+    align-self: center;
+    border: 1px solid rgb(var(--basecolor));
+    color: rgb(var(--basecolor));
+    background-color: rgb(var(--fontcolor));
+    padding: 7px;
+    margin: 7px;
+    border-radius: 35px;
+    font-weight: 700;
+    transition: var(--fastrans);
+}
+.ServicesText{
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+.Image {
+    position: relative;
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    width: 30%;
+    height: 50vh;
+    margin: 1rem auto;
+    text-align: center;
+}
+.Img{
+	filter: drop-shadow(1px 1px 3px gray);
+	border-radius: 25px;
+}
+.article p {
+    margin-bottom: 1rem;
+	font-style: normal;
+	line-height: 1em;
+}
+.article{
+    text-align: left;
+}
+.article > h1{
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    text-shadow: 1px 1px 7px white;
+    transition: 300ms;
+}
+.article > h1:hover{
+    text-shadow: 1px 1px 14px white;
+}
+
+@media screen and (max-width: 490px) and (orientation: portrait) {
+    .imagecontainer{
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .Proj{
+        width: 100%;
+        padding: 2rem;
+    }
+    .Proj figcaption{
+        padding: 2rem;
+    }
+    .Image {
+        width: 35vw;
+        height: 35vw;
+        border-radius: 21px;
+    }
+    .article{
+        padding: 2rem 1rem;
+    }
+    .article > h1{
+        font-size: 5rem;
+    }
+    .article p {
+        font-style: monospace;
+    }
+}
+@media screen and (max-width: 700px) and (orientation:landscape) {
+    .Image {
+        border-radius: 35px;
+    }
+    .article{
+        padding: 1rem;
+    }
+    .article > h1{
+        font-size: 3rem;
+    }
+}

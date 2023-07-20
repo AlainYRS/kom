@@ -1,5 +1,5 @@
 :root {
-  --basecolor: 0,0,0; /*#2F303A #2B3035*/
+  --basecolor: 0,0,0;
   --fontcolor: 255,255,255;
   --fastrans: 300ms;
   --medtrans: 700ms;
@@ -27,7 +27,7 @@ body {
   background-color: rgb(var(--basecolor));
 	margin: 0px auto;
   width: clamp(320px, 100vw, 100vw);
-  min-height: 568px;
+  min-height: 580px;
   overflow-x: hidden;
   font-family: monospace;
   font-size: clamp(9px, 1.4vw, 21px);

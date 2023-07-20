@@ -21,9 +21,6 @@ const HeaderCompBoots = ()=>{
                   <li className="nav-item" onClick={()=>setDispMenu(true)}>
                     <a className="nav-link" href="/ElPatron">El Patron</a> {/*active disabled*/}
                   </li>
-                  <li className="nav-item" onClick={()=>setDispMenu(true)}>
-                    <a className="nav-link" href="/GetInTouch">Get In Touch</a> {/*active disabled*/}
-                  </li>
                 </ul>
               </div>
             </div>

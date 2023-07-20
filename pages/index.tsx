@@ -33,7 +33,7 @@ export default function Home() {
         <div id={styles.Logo}><Image src="/Images/logo.png" alt="El Patron Logo" fill/></div>
         <div id={styles.MainLinksMenu}>
           <Link  style={{textDecoration:'none'}} id={styles.AboutUs} className={styles.MainLink} href="/Komander"><span>El Komander</span></Link>
-          <Link  style={{textDecoration:'none'}} id={styles.NewestProject} className={styles.MainLink} href="/Patron"><span>El Patron</span></Link>
+          {/* <Link  style={{textDecoration:'none'}} id={styles.NewestProject} className={styles.MainLink} href="/Patron"><span>El Patron</span></Link> */}
         </div>
       </main>
       <FooterComp 
@@ -44,7 +44,7 @@ export default function Home() {
           made: "made",
           version: "version",
           }}
-          styles={{backgroundColor: 'rgb(43,44,56)'}}
+          styles={{backgroundColor: 'rgb(0,0,0)'}}
       />
     </>
   )

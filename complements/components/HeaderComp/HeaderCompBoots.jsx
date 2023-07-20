@@ -16,10 +16,10 @@ const HeaderCompBoots = ()=>{
               <div className={DispMenu ? "navbar-collapse collapse" : "navbar-collapse active"} id="navbarNav">
                 <ul className="navbar-nav ms-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="/">Concierto</a> {/*active disabled*/}
+                    <a className="nav-link" href="/Komander">Concierto</a>
                   </li>
                   <li className="nav-item" onClick={()=>setDispMenu(true)}>
-                    <a className="nav-link" href="/ElPatron">El Patron</a> {/*active disabled*/}
+                    <a className="nav-link" href="/ElPatron">El Patron</a>
                   </li>
                 </ul>
               </div>

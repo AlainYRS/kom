@@ -75,7 +75,7 @@ export default function Komander(){
                         <div className={styles.ticketsContainer}>
                             <label htmlFor="VIPGold">VIP Gold: $300 </label>
                             <div>
-                                <p onClick={()=>setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold - 1})}> - </p>
+                                <p onClick={()=>{CarTickets.VIPGold > 0 && setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold - 1})}}> - </p>
                                 <p>{CarTickets.VIPGold}</p>
                                 <p onClick={()=>setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold + 1})}> + </p>
                             </div>
@@ -83,7 +83,7 @@ export default function Komander(){
                         <div className={styles.ticketsContainer}>
                             <label htmlFor="VIP">VIP: $250 </label>
                             <div>
-                                <p onClick={()=>setCarTickets({...CarTickets, VIP: CarTickets.VIP - 1})}> - </p>
+                                <p onClick={()=>{CarTickets.VIP > 0 && setCarTickets({...CarTickets, VIP: CarTickets.VIP - 1})}}> - </p>
                                 <p>{CarTickets.VIP}</p>
                                 <p onClick={()=>setCarTickets({...CarTickets, VIP: CarTickets.VIP + 1})}> + </p>
                             </div>
@@ -91,7 +91,7 @@ export default function Komander(){
                         <div className={styles.ticketsContainer}>
                             <label htmlFor="General">General: $300 </label>
                             <div>
-                                <p onClick={()=>setCarTickets({...CarTickets, General: CarTickets.General - 1})}> - </p>
+                                <p onClick={()=>{CarTickets.General > 0 && setCarTickets({...CarTickets, General: CarTickets.General - 1})}}> - </p>
                                 <p>{CarTickets.General}</p>
                                 <p onClick={()=>setCarTickets({...CarTickets, General: CarTickets.General + 1})}> + </p>
                             </div>

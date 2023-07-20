@@ -1,14 +1,22 @@
 :root {
   --basecolor: 0,0,0;
   --fontcolor: 255,255,255;
-  --fastrans: 300ms;
-  --medtrans: 700ms;
-  --slotrans: 2100ms;
+  --vfast: 140ms;
+  --fast: 210ms;
+  --norm: 350ms;
+  --slow: 1000ms;
+  --vslow: 2100ms;
 }
-main{
+html{
+  width: 100vw;
+  overflow-x: hidden;
+}
+html, main, body{
   background-color: rgb(var(--basecolor));
   color: rgb(var(--fontcolor));
-  overflow: hidden;
+	margin: 0px auto;
+  width: clamp(320px, 100vw, 100vw);
+  font-size: clamp(9px, 1.4vw, 21px);
 }
 * {
   box-sizing: border-box;
@@ -17,20 +25,12 @@ main{
 }
 body {
 	width: 100%;
-	margin: 0px auto auto auto;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 html,
 body {
-  color: rgb(var(--fontcolor));
-  background-color: rgb(var(--basecolor));
-	margin: 0px auto;
-  width: clamp(320px, 100vw, 100vw);
-  min-height: 580px;
-  overflow-x: hidden;
   font-family: monospace;
-  font-size: clamp(9px, 1.4vw, 21px);
 }
 a {
   color: inherit;
@@ -48,9 +48,7 @@ h3{
 ul{
   font-size: 16px;
 }
-
-
-nav{
+/* nav{
   top: 0;
   padding: .5rem 0;
 }
@@ -107,4 +105,4 @@ nav .MenuLogo{
     border: 1px solid rgba(210,210,210,.2);
     width: 30px;
   }
-}
+} */

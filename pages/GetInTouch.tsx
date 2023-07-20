@@ -24,7 +24,7 @@ export default function GetinTouch(){
     
         emailjs.sendForm(
                 'ayrs_portfolio',
-                'template_komander_contact',
+                'template_mhp0fk2',
             form.current,
                 '0XItIaup159uSnAFI')
           .then((result:any) => {

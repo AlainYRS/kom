@@ -71,7 +71,7 @@ export default function Komander(){
                     <article className={styles.articleHead}>
                         <h1>Adquiere aqui tus boletos</h1>
                     </article>
-                    <form method="post" ref={form} className={styles.form}>
+                    <form method="post" id="ticketsSeller" ref={form} className={styles.form}>
                         <div className={styles.ticketsContainer}>
                             <label htmlFor="VIPGold">VIP Gold: $300 </label>
                             <div>

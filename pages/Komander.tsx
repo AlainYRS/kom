@@ -29,7 +29,7 @@ export default function Komander(){
                 ¡Prepárate para una noche épica de música en vivo! El 19 de agosto de 2023, &quot;El Komander&quot; tomará el escenario de &quot;El Patron Bar & Grill&quot; en 205 Talbot St W, Leamington, ON N8H 1N8. No te pierdas esta oportunidad única de vivir la pasión y la energía de uno de los mejores grupos de música. ¡Únete a nosotros y déjate llevar por el ritmo inigualable de &quot;El Komander&quot;! ¡Te esperamos con los brazos abiertos!
                 <br/>
                 <br/>
-                Get ready for an epic night of live music! On August 19, 2023, &quot;El Komander&quot; will take the stage at &quot;El Patron Bar & Grill&quot; located at 205 Talbot St W, Leamington, ON N8H 1N8. Don't miss this unique opportunity to experience the passion and energy of one of the best music groups. Join us and let yourself be carried away by the unmatched rhythm of &quot;El Komander&quot;! We look forward to welcoming you with open arms!
+                Get ready for an epic night of live music! On August 19, 2023, &quot;El Komander&quot; will take the stage at &quot;El Patron Bar & Grill&quot; located at 205 Talbot St W, Leamington, ON N8H 1N8. Don&apos;t miss this unique opportunity to experience the passion and energy of one of the best music groups. Join us and let yourself be carried away by the unmatched rhythm of &quot;El Komander&quot;! We look forward to welcoming you with open arms!
             </ul>
         </>,
     })

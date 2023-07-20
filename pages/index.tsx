@@ -28,12 +28,15 @@ export default function Home() {
       />
       <main className={styles.main}>
         <div className={styles.GetTouchCont}>
-          <a href={'/GetInTouch'} className={styles.MenuButton}>Get In Touch</a>
+          <a href={'/GetInTouch'} className={styles.MenuButton}>Contactanos</a>
         </div>
-        <div id={styles.Logo}><Image src="/Images/logo.png" alt="El Patron Logo" fill/></div>
-        <div id={styles.MainLinksMenu}>
-          <Link  style={{textDecoration:'none'}} id={styles.AboutUs} className={styles.MainLink} href="/Komander"><span>El Komander</span></Link>
-          {/* <Link  style={{textDecoration:'none'}} id={styles.NewestProject} className={styles.MainLink} href="/Patron"><span>El Patron</span></Link> */}
+        <div className={styles.contentHome}>
+          <div id={styles.Logo}>
+            <Image src="/Images/logo.png" alt="El Patron Logo" fill/>
+          </div>
+          <Link href={"/Komander"} id={styles.Artist}>
+            <Image src="/Images/Komander.jpg" alt="El Komander" fill/>
+          </Link>
         </div>
       </main>
       <FooterComp 

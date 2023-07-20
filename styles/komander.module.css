@@ -147,8 +147,8 @@
     }
 }
 
-@media screen and (max-width: 400px) and (orientation:landscape) {
-    .main{
+@media screen and (max-width: 900px) and (orientation:landscape) {
+    /* .main{
         background-color: red;
         grid-template-rows: calc(100vh - 140px) max-content;
     }
@@ -161,5 +161,5 @@
     .IconSO{
         width:35px;
         height: 35px;
-    }    
+    }     */
 }

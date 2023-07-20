@@ -71,13 +71,13 @@
 	text-shadow: 1px 1px 14px white;
 }
 .ticketsContainer{
-    width: clamp(200px, 300px, 500px);
+    width: clamp(200px, 350px, 500px);
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
 .ticketsContainer div{
-    width: 140px;
+    width: 120px;
     height: 100%;
     display: flex;
     background-color: rgba(255,255,255,0.1);
@@ -88,7 +88,7 @@
     flex-flow: row nowrap;
 }
 .ticketsContainer p{
-    width: 140px;
+    width: 120px;
     /* height: 100%; */
     margin: auto;
     background-color: black;

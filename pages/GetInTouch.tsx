@@ -55,14 +55,15 @@ export default function GetinTouch(){
                     keywords: "", //Keywords to be read by SEO for this page
                 }}
             />
-            {/* <HeaderCompBoots /> */}
             <main className={styles.main}>
                 <div className={styles.container}>
                     <article className={styles.articleHead}>
                         <h1>Contact</h1>
-                        <Link href={"/"} className="navbar-brand">                
-                            <Image className="MenuLogo" src={'./Images/logo.png'} fill alt="El Patron Logo"/>
-                        </Link>
+                        <div className={styles.backHome}>
+                            <Link href={"/"}>                
+                                <Image className="MenuLogo" src={'/Images/logo.png'} fill alt="El Patron Logo"/>
+                            </Link>
+                        </div>
                     </article>
                     <form method="post" ref={form} onSubmit={sendEmail} className={styles.form}>
                         <label htmlFor="user_name">Name / Name:*</label>

@@ -6,6 +6,7 @@ import FooterComp from "@/complements/components/FooterComp/FooterComp";
 import styles from '@/styles/komander.module.css'
 import {HeaderCompBoots} from '@/complements/components/HeaderComp/HeaderCompBoots';
 import ShowTitle from "@/complements/components/ShowTitle/ShowTitle";
+import Link from "next/link";
 
 interface IClicked{
     title: string
@@ -63,9 +64,9 @@ export default function Komander(){
             <main className={styles.main}>
                 <div className={styles.Image}>
                     <Image className={styles.Img} src={Clicked.image} fill alt={Clicked.title}/>
-                    <div className={styles.Sponsor}>
+                    <Link href="/" className={styles.Sponsor}>
                         <Image className={styles.SponsorLogo} src={Clicked.Sponsor} fill alt="Logo Patrocinador"/>
-                    </div>
+                    </Link>
                 </div>
                 <article className={styles.article}>
                     <h1 className={styles.Subtitle}>{Clicked.title}</h1>

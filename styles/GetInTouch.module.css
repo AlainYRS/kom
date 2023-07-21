@@ -2,6 +2,11 @@
 	display: grid;
 	gap: 5px;
 }
+.backHome{
+	width: 140px;
+	height: 140px;
+	position: relative;
+}
 .container label {
 	font-weight: bold;
 	display: block;

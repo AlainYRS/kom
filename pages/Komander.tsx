@@ -11,6 +11,7 @@ interface IClicked{
     title: string
     image:string,
     content: any,
+    Sponsor: string,
 }
 
 export default function Komander(){
@@ -28,6 +29,7 @@ export default function Komander(){
     const[Clicked,setClicked] = useState<IClicked>({
         title: 'El Komander',
         image:'/Images/Komander.jpg',
+        Sponsor: '/Icons/manifest_icons/MaskableLogo.png',
         content:
         <>
             <p className={styles.Description} style={{position: 'relative', textAlignLast:'initial'}}>¡Noche de música imperdible! Únete a &quot;El Komander&quot; en &quot;El Patron Bar & Grill&quot;, Leamington, ON, el 19 de agosto de 2023. ¡No te lo pierdas!</p>
@@ -58,10 +60,12 @@ export default function Komander(){
                     keywords: "El Komander, El Patron", //Keywords to be read by SEO for this page
                 }}
             />
-            {/* <HeaderCompBoots /> */}
             <main className={styles.main}>
                 <div className={styles.Image}>
                     <Image className={styles.Img} src={Clicked.image} fill alt={Clicked.title}/>
+                    <div className={styles.Sponsor}>
+                        <Image className={styles.SponsorLogo} src={Clicked.Sponsor} fill alt="Logo Patrocinador"/>
+                    </div>
                 </div>
                 <article className={styles.article}>
                     <h1 className={styles.Subtitle}>{Clicked.title}</h1>

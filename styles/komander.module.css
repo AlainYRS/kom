@@ -16,10 +16,21 @@
     grid-area: Image;
     position: relative;
     width: 90%;
-    vertical-align: top;
     height: 100%;
+    vertical-align: top;
     margin: auto;
+}
+.Img{
     border-radius: 50%;
+    overflow: hidden;
+}
+.Sponsor{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 7px;
     overflow: hidden;
 }
 .article{

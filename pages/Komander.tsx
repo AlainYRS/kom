@@ -4,8 +4,6 @@ import Head from "next/head";
 import PagesHeadComp from "@/complements/components/PagesHeadComp/PagesHeadComp";
 import FooterComp from "@/complements/components/FooterComp/FooterComp";
 import styles from '@/styles/komander.module.css'
-import {HeaderCompBoots} from '@/complements/components/HeaderComp/HeaderCompBoots';
-import ShowTitle from "@/complements/components/ShowTitle/ShowTitle";
 import Link from "next/link";
 
 interface IClicked{
@@ -16,7 +14,6 @@ interface IClicked{
 }
 
 export default function Komander(){
-    const [TitleVisible, setTitleVisible] = useState<any>(null)
     const [CarTickets, setCarTickets] = useState<any>(
         {
             VIPGold: 0,
@@ -77,14 +74,14 @@ export default function Komander(){
                         <h1>Adquiere aqui tus boletos</h1>
                     </article>
                     <form method="post" id="ticketsSeller" ref={form} className={styles.form}>
-                        <div className={styles.ticketsContainer}>
+                        {/* <div className={styles.ticketsContainer}>
                             <label htmlFor="VIPGold">VIP Gold: $300 </label>
                             <div>
                                 <p onClick={()=>{CarTickets.VIPGold > 0 && setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold - 1})}}> - </p>
                                 <p>{CarTickets.VIPGold}</p>
                                 <p onClick={()=>setCarTickets({...CarTickets, VIPGold: CarTickets.VIPGold + 1})}> + </p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className={styles.ticketsContainer}>
                             <label htmlFor="VIP">VIP: $250 </label>
                             <div>
@@ -94,7 +91,7 @@ export default function Komander(){
                             </div>
                         </div>
                         <div className={styles.ticketsContainer}>
-                            <label htmlFor="General">General: $300 </label>
+                            <label htmlFor="General">General: $150 </label>
                             <div>
                                 <p onClick={()=>{CarTickets.General > 0 && setCarTickets({...CarTickets, General: CarTickets.General - 1})}}> - </p>
                                 <p>{CarTickets.General}</p>
@@ -125,7 +122,6 @@ export default function Komander(){
                 version: "version",
                 }}
             />
-            {TitleVisible !== null && <ShowTitle TitleConfig={TitleVisible} />}
         </>
     )
 }

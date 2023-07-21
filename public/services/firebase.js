@@ -1,21 +1,23 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore, collection, getDocs, addDoc } from 'firebase/firestore/lite';
+import { getAuth, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail, signInWithPopup } from "firebase/auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "NEXT_PUBLIC_apiKey",
-  authDomain: "NEXT_PUBLIC_authDomain",
-  projectId: "NEXT_PUBLIC_projectId",
-  storageBucket: "NEXT_PUBLIC_storageBucket",
-  messagingSenderId: "NEXT_PUBLIC_messagingSenderId",
-  appId: "NEXT_PUBLIC_appId",
-  measurementId: "NEXT_PUBLIC_measurementId",
+  apiKey: proicess.env.NEXT_PUBLIC_apiKey,
+  authDomain: proicess.env.NEXT_PUBLIC_authDomain,
+  projectId: proicess.env.NEXT_PUBLIC_projectId,
+  storageBucket: proicess.env.NEXT_PUBLIC_storageBucket,
+  messagingSenderId: proicess.env.NEXT_PUBLIC_messagingSenderId,
+  appId: proicess.env.NEXT_PUBLIC_appId,
+  measurementId: proicess.env.NEXT_PUBLIC_measurementId,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const firebase = initializeApp(firebaseConfig);
+const dbfirestore = getFirestore(firebase);
+const analytics = getAnalytics(firebase);
+const auth = getAuth(firebase);
+const GoogleUser = new GoogleAuthProvider();
+const FacebookUser = new FacebookAuthProvider();
+
+
+export {firebase, dbfirestore, auth, analytics};

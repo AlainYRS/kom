@@ -139,7 +139,7 @@
         margin: auto;
     }
     .article > h1{
-        font-size: 6rem;
+        font-size: 4.9rem;
     }
     .container {
         width: 100%;
@@ -148,6 +148,10 @@
 }
 
 @media screen and (max-width: 900px) and (orientation:landscape) {
+    .Image{
+        width: 90%;
+        height: 60%;
+    }
     /* .main{
         background-color: red;
         grid-template-rows: calc(100vh - 140px) max-content;

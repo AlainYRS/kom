@@ -4,8 +4,7 @@ import React from 'react';
 import styles from '@/styles/Home.module.css'
 import PagesHeadComp from '@/complements/components/PagesHeadComp/PagesHeadComp'
 import FooterComp from "@/complements/components/FooterComp/FooterComp";
-import Image from 'next/image'
-
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -32,10 +31,10 @@ export default function Home() {
         </div>
         <div className={styles.contentHome}>
           <div id={styles.Logo}>
-            <Image src="/Images/logo.png" alt="El Patron Logo" fill/>
+            <Image src="/Images/logo.png" alt="El Patron Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
           <Link href={"/Komander"} id={styles.Artist}>
-            <Image src="/Images/Komander.jpg" alt="El Komander" fill/>
+            <Image src="/Images/Komander.jpg" alt="El Komander" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </Link>
         </div>
       </main>

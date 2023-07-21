@@ -63,9 +63,9 @@ export default function Komander(){
             />
             <main className={styles.main}>
                 <div className={styles.Image}>
-                    <Image className={styles.Img} src={Clicked.image} fill alt={Clicked.title}/>
+                    <Image className={styles.Img} src={Clicked.image} alt={Clicked.title} fill sizes="(max-width: 490px) 90vw"/>
                     <Link href="/" className={styles.Sponsor}>
-                        <Image className={styles.SponsorLogo} src={Clicked.Sponsor} fill alt="Logo Patrocinador"/>
+                        <Image className={styles.SponsorLogo} src={Clicked.Sponsor} alt="Logo Patrocinador" fill sizes="(max-width: 200px) 10vw"/>
                     </Link>
                 </div>
                 <article className={styles.article}>

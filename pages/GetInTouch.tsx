@@ -61,7 +61,7 @@ export default function GetinTouch(){
                         <h1>Contact</h1>
                         <div className={styles.backHome}>
                             <Link href={"/"}>                
-                                <Image className="MenuLogo" src={'/Images/logo.png'} fill alt="El Patron Logo"/>
+                                <Image className="MenuLogo" src={'/Images/logo.png'} alt="El Patron Logo" fill sizes="(max-width: 140px) 10vw"/>
                             </Link>
                         </div>
                     </article>

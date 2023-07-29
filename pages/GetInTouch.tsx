@@ -66,9 +66,9 @@ export default function GetinTouch(){
                         <label htmlFor="user_name">Nombre: (Opcional)</label>
                             <input name="user_name" autoFocus type="text" placeholder="Ingresa tu nombre (opcional)" id="user_name" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
                         <label htmlFor="email">Email: (Opcional)</label>
-                            <input name="email" autoFocus type="email" placeholder="Ingresa tu correo (opcional)" id="user_email" value={contactForm.email} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
+                            <input name="email" autoFocus type="email" placeholder="Ingresa tu correo (opcional)" id="user_email" value={contactForm.email} onChange={(e)=>setContactForm({...contactForm, email: e.target.value})}/>
                         <label htmlFor="restaurant">Restaurante:*</label>
-                            <input name="restaurant" type="text" placeholder="Sobre que restaurante?" id="restaurant" value={contactForm.restaurant} required onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
+                            <input name="restaurant" type="text" placeholder="Sobre que restaurante?" id="restaurant" value={contactForm.restaurant} required onChange={(e)=>setContactForm({...contactForm, restaurant: e.target.value})}/>
                         <label htmlFor="subject">Tema:*</label>
                             <input name="subject" type="text" id="subject" placeholder="Cual es el tema?" value={contactForm.subject}  onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
                         <label htmlFor="message">Mensaje:*</label>

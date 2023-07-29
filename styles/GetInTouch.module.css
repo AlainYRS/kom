@@ -3,8 +3,10 @@
 	gap: 5px;
 }
 .backHome{
-	width: 140px;
-	height: 140px;
+	width: 100px;
+	height: 100px;
+	border-radius: 7px;
+	overflow: hidden;
 	position: relative;
 }
 .container label {
@@ -35,16 +37,13 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.articleHead > h1{
+.articleHead > h3{
 	text-align: left;
-    padding: 1rem;
-    font-size: 3rem;
-    text-shadow: 1px 1px 7px white;
+    padding: 0.35rem;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 4px white;
     transition: 300ms;
     grid-area: articleHead;
-}
-.articleHead > h1:hover{	
-	text-shadow: 1px 1px 14px white;
 }
 .container {
 	max-width: 600px;
@@ -58,18 +57,18 @@
     width: 100%;
 	padding: 10px;
     align-self: center;
+    background-color: rgba(35,49,56,0.7);
     border: 1px solid rgb(var(--fontcolor));
     color: rgb(var(--fontcolor));
-    background-color: rgb(var(--basecolor));
     padding: 7px;
     border-radius: 14px;
     font-weight: 700;
-    transition: var(--fastrans);
+    transition: var(--norm);
 }
 .container button:hover{
-    border: 1px solid rgb(var(--basecolor));
-    color: rgb(var(--basecolor));
-    background-color: rgb(var(--fontcolor));
+    background-color: rgba(35,49,56,1);
+    box-shadow: 1px 1px 14px white;
+    text-shadow: 1px 1px 3px white;
 }
 @media screen and (max-width: 490px) and (orientation:portrait){	
 	.contact-info {

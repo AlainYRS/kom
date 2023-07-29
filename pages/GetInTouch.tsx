@@ -7,6 +7,7 @@ import FooterComp from "@/complements/components/FooterComp/FooterComp";
 import styles from '@/styles/GetInTouch.module.css'
 import {HeaderCompBoots} from '@/complements/components/HeaderComp/HeaderCompBoots';
 import emailjs from '@emailjs/browser';
+import Developer from '@/complements/components/DeveloperComp/DeveloperComp';
 
 export default function GetinTouch(){
 
@@ -50,7 +51,7 @@ export default function GetinTouch(){
             <PagesHeadComp
                 data={{
                     faviconURL: "/Icons/manifest_icons/logo.png", //URL of icon to be displayed besides the title tab.
-                    title: "El Patron - Contact", //Title to be displayed in the tab. In case of traslations needs to consider the marker and tag to be traslated, such as this sample.
+                    title: "Quejas y Sugerencias", //Title to be displayed in the tab. In case of traslations needs to consider the marker and tag to be traslated, such as this sample.
                     description: "", //Description to be read by SEO for this page
                     keywords: "", //Keywords to be read by SEO for this page
                 }}
@@ -58,34 +59,29 @@ export default function GetinTouch(){
             <main className={styles.main}>
                 <div className={styles.container}>
                     <article className={styles.articleHead}>
-                        <h1>Contact</h1>
-                        <div className={styles.backHome}>
-                            <Link href={"/"}>                
-                                <Image className="MenuLogo" src={'/Images/logo.png'} alt="El Patron Logo" fill sizes="(max-width: 140px) 10vw"/>
-                            </Link>
-                        </div>
+                        <h3>Buzon de quejas y sugerencias</h3>
                     </article>
                     <form method="post" ref={form} onSubmit={sendEmail} className={styles.form}>
-                        <label htmlFor="user_name">Name / Name:*</label>
-                            <input name="user_name" autoFocus type="text" placeholder="Enter your First Name " id="name" required value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
-                        <label htmlFor="user_email">Email:*</label>
-                            <input name="user_email" type="email" placeholder="Enter your Email " id="email" required value={contactForm.email}  onChange={(e)=>setContactForm({...contactForm, email: e.target.value})}/>
-                        <label htmlFor="subject">Tema / Subject:</label>
-                            <input name="subject" type="text" id="subject" value={contactForm.subject}  onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
-                        <label htmlFor="message">Mensaje / Message:</label>
-                            <textarea name="message" id="message" rows={5} placeholder="Type your Message Here..." value={contactForm.message}  onChange={(e)=>setContactForm({...contactForm, message: e.target.value})}></textarea>
-                        <button type="submit" value="Send">Send</button>
+                        <label htmlFor="user_name">Nombre: (Opcional)</label>
+                            <input name="user_name" autoFocus type="text" placeholder="Ingresa tu nombre (opcional)" id="user_name" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
+                        <label htmlFor="email">Email: (Opcional)</label>
+                            <input name="email" autoFocus type="email" placeholder="Ingresa tu correo (opcional)" id="user_email" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
+                        <label htmlFor="restaurant">Restaurante:*</label>
+                            <input name="restaurant" type="text" placeholder="Sobre que restaurante?" id="restaurant" value={contactForm.subject} required onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
+                        <label htmlFor="subject">Tema:*</label>
+                            <input name="subject" type="text" id="subject" placeholder="Cual es el tema?" value={contactForm.subject}  onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
+                        <label htmlFor="message">Mensaje:*</label>
+                            <textarea name="message" id="message" rows={5} placeholder="Escribe tu mensaje aqui..." value={contactForm.message}  onChange={(e)=>setContactForm({...contactForm, message: e.target.value})}></textarea>
+                        <button type="submit" value="Send">Enviar</button>
                     </form>
                 </div>
             </main>
-            <FooterComp 
-                classNames={''}
-                langs={{
-                developed: "Developed by",
-                copyright: "Copyright",
-                made: "made",
-                version: "version",
-                }}
+            <Developer 
+                author= {'Alain Y Rivera S'}
+                date= {'Jul 28, 2023'}
+                version= {'1.0.0'}
+                styles={{fontSize:"0.4rem", color:'rgba(210,210,210,0.7)'}}
+                classNames={'other'}
             />
         </>
     )

@@ -43,7 +43,7 @@ export default function GetinTouch(){
         <>
             <Head>
                 <title>Contact</title>
-                <meta name="description" content="Landing page del Concierto del Komander organizado por El Patron Bar & Grill" />
+                <meta name="description" content="Buzon de quejas y sugerencias de restaurantes" />
                 <link rel="icon" href="/Icons/manifest_icons/logo.png" />
                 <meta name="theme-color" content="#000000" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />

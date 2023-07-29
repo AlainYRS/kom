@@ -37,9 +37,9 @@
     border-radius: 50%;
     overflow: hidden;
 }
-#Logo, #Artist{
-    width: 350px;
-    height: 350px;
+.Logo, #Artist{
+    width: 210px;
+    height: 210px;
     position: relative;
     margin: auto;
     border-radius: 14px;

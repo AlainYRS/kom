@@ -29,13 +29,13 @@ export default function Home() {
       />
       <main className={styles.main}>
         <div className={styles.contentHome}>
-          <div id={styles.Logo}>
+          <div className={styles.Logo}>
             <Image src="/Images/ElPatronClear.png" alt="El Patron Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
-          <div id={styles.Logo}>
+          <div className={styles.Logo}>
             <Image src="/Images/HotTacos.PNG" alt="Hot Tacos Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
-          <div id={styles.Logo}>
+          <div className={styles.Logo}>
             <Image src="/Images/StreetFood.jpg" alt="Street Food Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
           {/* <Link href={"/Komander"} id={styles.Artist}>

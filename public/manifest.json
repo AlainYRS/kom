@@ -1,8 +1,8 @@
 {
-    "name": "ElKomander",
-    "short_name": "Komander",
+    "name": "QuejasSugerencias",
+    "short_name": "Sugerencias",
     "start_url": "/",
-    "description": "Komander Progresive Web Application",
+    "description": "Quejas y Sugerencias Progresive Web Application",
     "author": "Alain Yosseph Rivera Sánchez",
     "display": "standalone",
     "dir": "auto",

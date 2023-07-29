@@ -16,11 +16,12 @@ export default function GetinTouch(){
     interface IContactForm {
         name: string;
         email: string;
+        restaurant: string;
         subject: string;
         message: string;
     }
 
-    const [contactForm, setContactForm] = useState<IContactForm>({ name: '', email: '', subject: '', message: ''})
+    const [contactForm, setContactForm] = useState<IContactForm>({ name: '', email: '', restaurant: '', subject: '', message: ''})
 
     const sendEmail = (e:any) => {
         e.preventDefault();
@@ -32,7 +33,7 @@ export default function GetinTouch(){
                 '0XItIaup159uSnAFI')
           .then((result:any) => {
               alert('Message sent: ' + result.text);
-              setContactForm({ name: '', email: '', subject: '', message: ''})
+              setContactForm({ name: '', email: '', restaurant:'', subject: '', message: ''})
           }, (error:any) => {
               console.log('Message error: ',error.text);
           });
@@ -65,9 +66,9 @@ export default function GetinTouch(){
                         <label htmlFor="user_name">Nombre: (Opcional)</label>
                             <input name="user_name" autoFocus type="text" placeholder="Ingresa tu nombre (opcional)" id="user_name" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
                         <label htmlFor="email">Email: (Opcional)</label>
-                            <input name="email" autoFocus type="email" placeholder="Ingresa tu correo (opcional)" id="user_email" value={contactForm.name} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
+                            <input name="email" autoFocus type="email" placeholder="Ingresa tu correo (opcional)" id="user_email" value={contactForm.email} onChange={(e)=>setContactForm({...contactForm, name: e.target.value})}/>
                         <label htmlFor="restaurant">Restaurante:*</label>
-                            <input name="restaurant" type="text" placeholder="Sobre que restaurante?" id="restaurant" value={contactForm.subject} required onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
+                            <input name="restaurant" type="text" placeholder="Sobre que restaurante?" id="restaurant" value={contactForm.restaurant} required onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
                         <label htmlFor="subject">Tema:*</label>
                             <input name="subject" type="text" id="subject" placeholder="Cual es el tema?" value={contactForm.subject}  onChange={(e)=>setContactForm({...contactForm, subject: e.target.value})}/>
                         <label htmlFor="message">Mensaje:*</label>

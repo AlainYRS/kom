@@ -28,7 +28,7 @@ export default function GetinTouch(){
     
         emailjs.sendForm(
                 'ayrs_portfolio',
-                'template_mhp0fk2',
+                'Quejas_Sugerencias',
             form.current,
                 '0XItIaup159uSnAFI')
           .then((result:any) => {

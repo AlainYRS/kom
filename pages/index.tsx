@@ -28,6 +28,9 @@ export default function Home() {
         }}
       />
       <main className={styles.main}>
+        <div className={styles.GetTouchCont}>
+          <a href={'/GetInTouch'} className={styles.MenuButton}>Quejas y Sugerencias</a>
+        </div>
         <div className={styles.contentHome}>
           <div className={styles.Logo}>
             <Image src="/Images/ElPatronClear.png" alt="El Patron Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
@@ -41,9 +44,6 @@ export default function Home() {
           {/* <Link href={"/Komander"} id={styles.Artist}>
             <Image src="/Images/Komander.jpg" alt="El Komander" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </Link> */}
-        </div>
-        <div className={styles.GetTouchCont}>
-          <a href={'/GetInTouch'} className={styles.MenuButton}>Quejas y Sugerencias</a>
         </div>
       </main>
       <Developer 

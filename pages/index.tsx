@@ -39,7 +39,7 @@ export default function Home() {
             <Image src="/Images/HotTacos.png" alt="Hot Tacos Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
           <div className={styles.Logo}>
-            <Image src="/Images/StreetFood.jpg" alt="Street Food Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
+            <Image src="/Images/StreetFood.png" alt="Street Food Logo" fill sizes="(max-width: 350px) 40vw" priority={true}/>
           </div>
           {/* <Link href={"/Komander"} id={styles.Artist}>
             <Image src="/Images/Komander.jpg" alt="El Komander" fill sizes="(max-width: 350px) 40vw" priority={true}/>
